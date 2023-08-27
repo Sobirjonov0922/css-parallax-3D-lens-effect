@@ -1,0 +1,122 @@
+@import 'fonts.css';
+
+/* Common Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --index: calc(1vw + 1vh);
+  --transition: 1.5s cubic-bezier(.05, .5, 0, 1);
+}
+
+body {
+  color: #fff;
+  background: #000;
+  font-family: kamerik-3d;
+}
+/* Common Styles */
+
+.logo {
+  --logo-size: calc(var(--index) * 7.8);
+  width: var(--logo-size);
+  height: var(--logo-size);
+  background: no-repeat;
+  position: absolute;
+  top: calc(var(--index) * 2.8);
+  left: calc(50% - calc(var(--logo-size) / 2));
+  z-index: 1;
+}
+
+/* Layers Start */
+.layers {
+  perspective: 1100px;
+  overflow: hidden;
+}
+
+.layers__container {
+  min-height: 500px;
+  height: 100vh;
+  transform-style: preserve-3d;
+  transform: rotateX(var(--move-y)) rotateY(var(--move-x));
+  will-change: transform;
+  transition: transform var(--transition);
+}
+
+.layers__item {
+  background: no-repeat center center / cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  inset: -5vw;
+}
+
+.layer-1 {
+  transform: translateZ(-55px) scale(1.06);
+}
+
+.layer-2 {
+  transform: translateZ(80px) scale(.88);
+}
+
+.layer-3 {
+  transform: translateZ(180px) scale(.8);
+}
+
+.layer-4 {
+  transform: translateZ(190px) scale(.9);
+}
+
+.layer-5 {
+  transform: translateZ(300px) scale(.9);
+}
+
+.layer-5 {
+  transform: translateZ(380px);
+}
+
+.hero-content {
+  margin-top: calc(var(--index) * 5.5);
+  font-size: calc(var(--index) * 2.9);
+  letter-spacing: calc(var(--index) * -.15);
+  line-height: 1.35em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.hero-content span {
+  display: block;
+}
+
+.hero-content__p {
+  font-family: merriweather-italic-3d;
+  font-size: calc(var(--index) * .73);
+  letter-spacing: normal;
+  line-height: 3;
+  text-transform: none;
+}
+
+.button-start {
+  border: 3px solid rgb(255 255 255 / .4);
+  border-radius: 10em;
+  outline: none;
+  padding: calc(var(--index) * .7) calc(var(--index) * 1.25);
+  color: #fff;
+  background: transparent;
+  font-family: Arial;
+  font-size: calc(var(--index) * .7);
+  font-weight: 600;
+  letter-spacing: -.02vw;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.layer-4,
+.layer-5,
+.layer-6 {
+  pointer-events: none;
+}
+/* Layers End */

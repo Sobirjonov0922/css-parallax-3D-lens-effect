@@ -1,0 +1,15 @@
+/* Kamerik Start */
+@font-face {
+  font-family: kamerik-3d;
+  font-weight: 900;
+  src: url(../fonts/kamerik205-heavy.woff2);
+}
+/* Kamerik End */
+
+/* Merriweather Start */
+@font-face {
+  font-family: merriweather-italic-3d;
+  font-weight: 400;
+  src: url(../fonts/merriweather-regular-italic.woff2);
+}
+/* Merriweather End */
